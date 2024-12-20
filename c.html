@@ -1,0 +1,154 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <title>dropdown Menu</title>
+    <style>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+ 
+}
+
+.menu-bar {
+  background-color: rgb(20, 20, 51);
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  /* width: 120px; */
+  padding: 10px 30px;
+  /* text-align: center; */
+
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: rgb(62, 62, 248);
+}
+
+.fas {
+  float: right;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+
+/* dropdown menu style */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: rgb(20, 20, 51);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: rgb(20, 20, 51);
+}
+.dropdown-menu-2 {
+  display: none;
+}
+
+.dropdown-menu-1 ul li:hover .dropdown-menu-2 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color:rgb(20, 20, 51);
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  background-image: url(./bg.jpg);
+  background-position: center;
+}
+    </style>
+  </head>
+  <body>
+    <div class="menu-bar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Kamar</a></li>
+        <li><a href="#">Fasilitas <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+                <ul>
+                  <li><a href="#">Petualangan Alam</a></li>
+                  <li><a href="#">Pusat Kebugaran</a></li>
+                  <li>
+                    <a href="#">Kolam Renang <i class="fas fa-caret-right"></i></a>
+                    <div class="dropdown-menu-1">
+                      <ul>
+                        <li><a href="#">Sumber Air Panas</a></li>
+                        <li>
+                          <a href="#">Kolam Anak & Dewasa<i class="fas fa-caret-right"></i></a>
+                          <div class="dropdown-menu-2">
+                            <ul>
+                              <li><a href="">Reguler</a></li>
+                              <li><a href="">Premium</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><a href="#">Ruang Rapat</a></li>
+                </ul>
+              </div>
+        </li>
+        <li><a href="#">Pesan Sekarang</a></li>
+      </ul>
+    </div>
+
+    <div class="hero">
+      &nbsp;
+    </div>
+  </body>
+</html>
